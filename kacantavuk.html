@@ -39,13 +39,11 @@
 
     function runchick() {
 
-      var actionmove = parseInt(Math.floor(600) * Math.random());
+      var actionmove = Math.floor(600) * Math.random();
 
       chicken.style.margin = actionmove + "px";
 
     }
-
-    console.log(runchick())
 
     chicken.addEventListener("onmousemove", runchick());
 
