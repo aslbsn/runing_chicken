@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Runaway Chicken</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div>img {
+      width: 100px;
+      height: 100px;
+      overflow:hidden;
+    }
+
+    #anakutu {
+      overflow:hidden ;
+      max-width: 100%;
+      max-height: 100vh;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="anakutu">
+
+    <div onmousemove="runchick()" id="tavuk"><img src="img\images.png"></div>
+  </div>
+  <script>
+
+    var chicken = document.getElementById('tavuk');
+
+    function runchick() {
+
+      var actionmove = parseInt(Math.floor(600) * Math.random());
+
+      chicken.style.margin = actionmove + "px";
+
+    }
+
+    console.log(runchick())
+
+    chicken.addEventListener("onmousemove", runchick());
+
+  </script>
+
+
+</body>
+
+</html>
